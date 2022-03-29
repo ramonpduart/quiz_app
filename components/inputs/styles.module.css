@@ -1,0 +1,23 @@
+.input {
+  padding: 10px;
+  width: inherit;
+}
+
+.input_error {
+  padding: 10px;
+  width: inherit;
+  border: 1px solid #ff0000;
+}
+
+.container {
+  display: grid;
+}
+
+.label {
+  padding-bottom: 5px;
+}
+
+.label_error {
+  padding-bottom: 5px;
+  color: #ff0000;
+}

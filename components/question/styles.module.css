@@ -41,7 +41,7 @@
   justify-content: center;
   flex-wrap: wrap;
   max-width: 80%;
-  border: 1px solid #eaeaea;
+  border: 1px solid;
   border-radius: 10px;
   background: #ffffff;
 }

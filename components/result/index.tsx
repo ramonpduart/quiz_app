@@ -1,15 +1,16 @@
 import React from 'react'
+import { useRouter } from 'next/router'
 import { IProgressAnswers } from '../../models'
 import Button from '../button'
 import styles from './styles.module.css'
 
 interface IResult {
   resultAnswers: IProgressAnswers
-  handleFinish: () => void
 }
 
-export default function Result({ resultAnswers, handleFinish }: IResult) {
+export default function Result({ resultAnswers }: IResult) {
   const { total_correct_answers, total_questions } = resultAnswers
+  const router = useRouter()
 
   function getClassCircleBox(value: number) {
     switch (value) {
@@ -89,7 +90,11 @@ export default function Result({ resultAnswers, handleFinish }: IResult) {
       </p>
 
       <div>
-        <Button label="Fim" onClick={handleFinish} disabled={false} />
+        <Button
+          label="Fim"
+          onClick={() => router.push('/start')}
+          disabled={false}
+        />
       </div>
     </div>
   )

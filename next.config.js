@@ -1,7 +1,13 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
   reactStrictMode: true,
-  images: {
-    domains: ['deckofcardsapi.com'],
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/start',
+        permanent: true,
+      },
+    ]
   },
 }

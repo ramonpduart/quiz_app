@@ -1,3 +1,11 @@
+.main {
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  background: #f1f1f1cc;
+}
+
 .container {
   width: 40%;
   margin: 0 auto;
@@ -25,6 +33,9 @@
 }
 
 @media (max-width: 600px) {
+  .main {
+    padding: 2rem;
+  }
   .title {
     width: 100%;
     font-size: 1.5rem;

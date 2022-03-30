@@ -33,8 +33,8 @@ export default function Categories({
       .then(({ data }) => {
         setListCategories(data.categories)
       })
-      .catch(() => {
-        console.log('Ocorreu um erro com a api na busca de categorias.')
+      .catch((e) => {
+        console.log('Ocorreu um erro com a api na busca de categorias.', e)
       })
   }
 

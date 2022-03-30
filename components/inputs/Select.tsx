@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './styles.module.css'
 
-interface InputProps {
+interface ISelectProps {
   onChange: (str: string) => void
   label: string
   name: string
@@ -22,7 +22,7 @@ function Select({
   value,
   options,
   error = false,
-}: InputProps) {
+}: ISelectProps) {
   return (
     <div className={styles.container}>
       <label
@@ -37,7 +37,7 @@ function Select({
         value={value}
         className={error ? styles.input_error : styles.input}
       >
-        <option key="0" value="" selected>
+        <option key="0" value="">
           Selecione
         </option>
         {options.map((row: IOption, index: number) => (
